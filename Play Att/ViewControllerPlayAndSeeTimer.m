@@ -39,8 +39,6 @@ NSTimer *timer;
         
     }];
     
-    
-    
     if([self.selectedTasksList count]== 0)
     {
         NSLog(@"if       1");
@@ -77,6 +75,16 @@ NSTimer *timer;
     }
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
                                      target:self selector:@selector(updateTime) userInfo:nil repeats:YES];
+    
+    if ([musicPlayer playbackState] == MPMusicPlaybackStatePaused)
+    {
+        [self.PlayButton setImage:[UIImage imageNamed:@"playButton-101x101px.png"] forState:UIControlStateNormal];
+    }
+    if ([musicPlayer playbackState] == MPMusicPlaybackStatePlaying)
+    {
+        [self.PlayButton setImage:[UIImage imageNamed:@"pauseButton-101x101px.png"] forState:UIControlStateNormal];
+
+    }
 }
 
 - (void)queryParseForData:(void (^)(NSArray *))completionHandler{
@@ -114,11 +122,18 @@ NSTimer *timer;
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)PlaySong:(id)sender {
-    [musicPlayer play];
+    if ([musicPlayer playbackState] == MPMusicPlaybackStatePaused)
+    {
+        [self.PlayButton setImage:[UIImage imageNamed:@"pauseButton-101x101px.png"] forState:UIControlStateNormal];
+        [musicPlayer play];
+    }
+    if ([musicPlayer playbackState] == MPMusicPlaybackStatePlaying)
+    {
+        [self.PlayButton setImage:[UIImage imageNamed:@"playButton-101x101px.png"] forState:UIControlStateNormal];
+        [musicPlayer pause];
+    }
 }
-- (IBAction)PauseSong:(id)sender {
-    [musicPlayer pause];
-}
+
 - (IBAction)EndTask:(id)sender {
     
 }

@@ -21,7 +21,6 @@
 
 @property NSMutableArray *SongsToPlay;
 @property (weak, nonatomic) IBOutlet UIButton *PlayButton;
-@property (weak, nonatomic) IBOutlet UIButton *PauseButton;
 @property (weak, nonatomic) IBOutlet UIButton *EndActiPutton;
 @property (weak, nonatomic) IBOutlet UIButton *ArregoButton;
 
