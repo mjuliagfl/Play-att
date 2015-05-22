@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@property NSMutableArray* tasksList;
+@property NSMutableArray* switchStates;
+@property NSMutableArray* selectedTasksList;
 
+@property (weak, nonatomic) IBOutlet UITableView *tableTasks;
+@property (weak, nonatomic) IBOutlet UIButton *okButton;
 
 @end
 
