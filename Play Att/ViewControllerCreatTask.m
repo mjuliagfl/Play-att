@@ -36,7 +36,6 @@
 -(IBAction)ClickBackGrond:(id)sender
 {
     [_NameOfTask resignFirstResponder];
-    [_Detalhes resignFirstResponder];
     
 }
 
@@ -59,18 +58,17 @@
 
 - (IBAction)NewTask:(id)sender {
     NSString *name = self.NameOfTask.text;
-    NSString *descricao = self.Detalhes.text;
     NSDate *date = [self.Timer date];
     
     NSDateComponents *time = [[NSCalendar currentCalendar]
                               components:NSCalendarUnitHour | NSCalendarUnitMinute
                               fromDate:date];
-    NSString* hours = [NSString stringWithFormat:@"%02li", [time hour]];
-   NSString* minutes = [NSString stringWithFormat:@"%02li", [time minute]];
-   NSString* formattedtime = [NSString stringWithFormat: @" %@:%@", hours, minutes];
+   // NSString* hours = [NSString stringWithFormat:@"%02li", [time hour]];
+   //NSString* minutes = [NSString stringWithFormat:@"%02li", [time minute]];
+   //NSString* formattedtime = [NSString stringWithFormat: @" %@:%@", hours, minutes];
    //NSLog(formattedtime);
     
-    Task *newTask = [[Task alloc] initWithName:name Details:descricao Time:time Status:NO];
+    Task *newTask = [[Task alloc] initWithName:name Time:time Status:NO];
     
     [self.tasksList addObject:newTask];
     
@@ -80,7 +78,6 @@
     NSString *dateString = [dateFormat stringFromDate:date];
     PFObject *testObject = [PFObject objectWithClassName:@"Task"];
     testObject[@"name"] = name;
-    testObject[@"descricao"] = descricao;
     testObject[@"time"] = dateString;
     
     [testObject saveInBackground];

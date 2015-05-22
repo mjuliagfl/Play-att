@@ -37,18 +37,17 @@
             completionHandler(objects);
             for (int i = 0; i < [objects count]; i++){
                 NSString *name = objects[i][@"name"];
-                NSString *descricao = objects[i][@"descricao"];
                 NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
                 [dateFormat setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
                 NSDate *today = [dateFormat dateFromString:objects[i][@"time"]];
                 
-                NSString *dateString = [dateFormat stringFromDate:today];
+                //NSString *dateString = [dateFormat stringFromDate:today];
                 // NSLog(dateString);
                 
                 NSDateComponents *time = [[NSCalendar currentCalendar]
                                           components:NSCalendarUnitHour | NSCalendarUnitMinute
                                           fromDate:today];
-                Task *newTask = [[Task alloc] initWithName:name Details:descricao Time:time Status:NO];
+                Task *newTask = [[Task alloc] initWithName:name Time:time Status:NO];
                 [self.tasksList addObject:newTask];
                 
             }

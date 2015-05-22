@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="THs-fa-NsG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="THs-fa-NsG">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--Pre Load View Controller-->
@@ -111,13 +111,6 @@
                                     <action selector="OcultarTeclado:" destination="ruU-Mn-AlM" eventType="editingDidEndOnExit" id="0j8-Ak-HNx"/>
                                 </connections>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" id="lJI-rK-1yH">
-                                <rect key="frame" x="54" y="224" width="267" height="87"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="451939363.79724699">
-                                    <!--2015-04-28 18:42:43 +0000-->
-                                </date>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="by2-ru-An4">
                                 <rect key="frame" x="13" y="604" width="172" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -129,13 +122,6 @@
                                     <segue destination="san-Ua-uAL" kind="modal" identifier="Salvar" id="OT7-dJ-Uh4"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="csM-gm-XFA">
-                                <rect key="frame" x="67" y="410" width="240" height="143"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rYR-4G-V1r">
                                 <rect key="frame" x="193" y="604" width="172" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -146,13 +132,6 @@
                                     <segue destination="san-Ua-uAL" kind="modal" identifier="Cancelar" id="9p5-oD-Nbj"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qgr-HG-NLp">
-                                <rect key="frame" x="154" y="373" width="53" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create task" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="exd-Ec-jjC">
                                 <rect key="frame" x="131" y="69" width="113" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -160,6 +139,13 @@
                                 <color key="textColor" red="0.078431372550000003" green="0.86274509799999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.078431372550000003" green="0.86274509799999999" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="5" id="lJI-rK-1yH">
+                                <rect key="frame" x="54" y="256" width="267" height="155"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="451939363.79724699">
+                                    <!--2015-04-28 18:42:43 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -168,7 +154,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="Detalhes" destination="csM-gm-XFA" id="DGN-uU-4it"/>
                         <outlet property="NameOfTask" destination="OFV-zK-wAl" id="aMa-cq-vlR"/>
                         <outlet property="Nop" destination="rYR-4G-V1r" id="mhH-je-UoG"/>
                         <outlet property="Save" destination="by2-ru-An4" id="mqZ-dD-fyu"/>
@@ -561,7 +546,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="OT7-dJ-Uh4"/>
+        <segue reference="OCa-ur-2UA"/>
         <segue reference="ZbI-ej-dFv"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -12,14 +12,12 @@
 
 //implementation of the init method
 -(id) initWithName: (NSString *) name
-           Details: (NSString * ) details
               Time: (NSDateComponents *) time
             Status: (BOOL) status
 {
     
     if(self = [super init]){
         _name = name;
-        _details = details;
         _time = time;
         _status = status;
         

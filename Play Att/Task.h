@@ -13,7 +13,6 @@
 //defining class attributes
 
 @property NSString* name;
-@property NSString* details;
 @property NSDateComponents* time;
 @property BOOL status;
 
@@ -21,7 +20,6 @@
 //init method signature
 
 -(id) initWithName: (NSString *) name
-                Details: (NSString *) details
                 Time: (NSDateComponents *) time
                 Status: (BOOL) status;
 
